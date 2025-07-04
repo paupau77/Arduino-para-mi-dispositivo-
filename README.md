@@ -87,6 +87,7 @@ float convertirAConductividad(int val) {
 
 - Realiza una conversión lineal desde el valor del ADC a un valor estimado de conductividad en miliSiemens por centímetro (mS/cm).
 - El parámetro `maxConductivity` puede ajustarse para calibrar el sensor.
+
   ⚠️Nota: El código utiliza INPUT_PULLUP, por lo que no requiere resistencia externa en el botón.
 ---
 
