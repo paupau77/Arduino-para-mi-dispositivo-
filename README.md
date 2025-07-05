@@ -6,36 +6,49 @@ Medidor de salinidad basado en Arduino que permite visualizar la conductividad e
 
 ## 📑 Índice
 
-- [Componentes](#componentes)
-- [Esquema de conexión](#esquema-de-conexión)
-- [Instalación y dependencias](#instalación-y-dependencias)
-- [Explicación del código](#explicación-del-código)
-  - [setup()](#1-función-setup)
-  - [loop()](#2-función-loop)
-  - [convertirAConductividad()](#3-función-convertiraconductividad)
-- [Modo de uso](#modo-de-uso)
-- [Notas técnicas](#notas-técnicas)
-- [Licencia](#licencia)
-- [Autor](#autor)
+- [Componentes](#-componentes)
+- [Esquema de conexión](#-esquema-de-conexión)
+- [Instalación y dependencias](#-instalación-y-dependencias)
+- [Explicación del código](#-explicación-del-código)
+- [Calibración del sensor](#-calibración-del-sensor)
+- [Modo de uso](#-modo-de-uso)
+- [Notas técnicas](#-notas-técnicas)
+- [Licencia](#-licencia)
+- [Autor](#-autor)
 
 ---
 
 ## 🧰 Componentes
 
-| Componente                          | Cantidad |
-|-------------------------------------|----------|
-| Arduino UNO / Nano / compatible     | 1        |
+| Componente                     | Cantidad |
+|-------------------------------|----------|
+| Arduino UNO / Nano / compatible| 1        |
 | Sensor de conductividad (analógico) | 1        |
-| Pantalla OLED SSD1306 (I2C)         | 1        |
-| Pulsador                            | 1        |
-| Protoboard o placa perforada        | 1        |
-| Cables dupont                       | varios   |
+| Pantalla OLED SSD1306 (I2C)   | 1        |
+| Pulsador                      | 1        |
+| Protoboard o placa perforada  | 1        |
+| Cables dupont                 | varios   |
 
 ---
 
 ## 🔌 Esquema de conexión
 
-A continuación se presenta el circuito electrónico del dispositivo:
+- **Sensor de conductividad:**  
+  Conectar la salida analógica del sensor al pin **A0** del Arduino.
+
+- **Pantalla OLED SSD1306 (I2C):**  
+  - SDA -> A4 (Arduino UNO/Nano)  
+  - SCL -> A5 (Arduino UNO/Nano)  
+  - VCC -> 3.3V o 5V (según especificación de la pantalla)  
+  - GND -> GND
+
+- **Pulsador:**  
+  - Un extremo conectado a pin digital **2**  
+  - Otro extremo conectado a **GND**  
+  - El pin 2 está configurado con `INPUT_PULLUP`, por lo que **no requiere resistencia externa**.
+
+- **Alimentación:**  
+  Arduino alimentado con fuente estable de 5V o USB.
 
 ![Esquema de conexión](esquema_conexion.png)
 
@@ -43,12 +56,12 @@ A continuación se presenta el circuito electrónico del dispositivo:
 
 ## ⚙️ Instalación y dependencias
 
-1. Abrí el proyecto `medidor_salinidad.ino` en el IDE de Arduino.
-2. Instalá las siguientes librerías desde el Gestor de Librerías:
-   - `Adafruit SSD1306`
-   - `Adafruit GFX`
+1. Abrí el proyecto `código.ino` en el IDE de Arduino.
+2. Instalá las siguientes librerías desde el Gestor de Librerías:  
+   - Adafruit SSD1306  
+   - Adafruit GFX
 3. Cargá el sketch en tu placa Arduino.
-4. Conectá los componentes según el esquema anterior.
+4. Conectá los componentes según el esquema.
 
 ---
 
@@ -60,69 +73,81 @@ El firmware está desarrollado en C++ utilizando el entorno de Arduino.
 
 - Configura los pines.
 - Inicia la comunicación serie (`Serial.begin`).
-- Inicializa la pantalla OLED.
-- Muestra un mensaje inicial durante 2 segundos.
+- Inicializa la pantalla OLED y muestra un mensaje de bienvenida.
+- Si falla la pantalla, detiene la ejecución mostrando error.
 
 ### 2. Función `loop()`
 
-Contiene la lógica principal del sistema:
+- Lee el estado del botón con antirrebote optimizado.
+- Alterna entre estados de medición activa y pausa.
+- En medición activa:  
+  - Lee el valor del sensor (ADC).  
+  - Calcula el voltaje.  
+  - Convierte el valor a conductividad usando calibración.  
+  - Muestra los valores en pantalla y monitor serie.  
+- En pausa: muestra mensaje indicando el estado.
+- Incluye manejo básico de errores para lecturas fuera de rango.
 
-- Lee el estado del botón.
-- Detecta un cambio de estado (flanco descendente) con antirrebote.
-- Alterna entre los estados de pausa y medición.
-- Si no está en pausa:
-  - Lee el valor del sensor (ADC).
-  - Calcula el voltaje.
-  - Convierte el valor a una estimación de conductividad.
-  - Muestra los valores en pantalla y monitor serie.
-- Si está en pausa, muestra el mensaje correspondiente.
+### 3. Función `convertirAConductividad(int val)`
 
-### 3. Función `convertirAConductividad()`
+- Convierte linealmente el valor ADC (0-1023) a conductividad en mS/cm.
+- Usa variable `maxConductivity` para calibración.
 
-```cpp
-float convertirAConductividad(int val) {
-  return (val / 1023.0) * maxConductivity;
-}
-```
+---
 
-- Realiza una conversión lineal desde el valor del ADC a un valor estimado de conductividad en miliSiemens por centímetro (mS/cm).
-- El parámetro `maxConductivity` puede ajustarse para calibrar el sensor.
-  ---
-⚠️Nota: El código utiliza INPUT_PULLUP, por lo que no requiere resistencia externa en el botón.
+## 🔧 Calibración del sensor
+
+Para mejorar la precisión, es recomendable calibrar el sensor con soluciones patrón:
+
+1. Prepará una solución con conductividad conocida (por ejemplo, 10 mS/cm).
+2. Conectá el sensor y medí el valor ADC que produce esa solución.
+3. Ajustá la variable `maxConductivity` en el código con la fórmula:
+
+   ```
+   maxConductivity = (conductividad_conocida * 1023.0) / valorADC_medido;
+   ```
+
+4. Guardá y cargá el sketch en tu Arduino.
+5. Probá con diferentes soluciones para verificar precisión.
+
+> Para calibraciones avanzadas, podrías modificar el código para usar interpolación no lineal con múltiples puntos.
+
 ---
 
 ## ▶️ Modo de uso
 
-1. Al encender el dispositivo, se muestra un mensaje de bienvenida.
-2. Presioná el botón para alternar entre:
-   - Medición activa: se actualizan los valores.
-   - Pausa: se mantiene la última lectura.
-3. Los valores mostrados incluyen:
-   - Lectura ADC (0–1023)
-   - Voltaje (0–5 V)
-   - Conductividad estimada (mS/cm)
+- Al encender el dispositivo, se muestra un mensaje de bienvenida.
+- Presioná el botón para alternar entre:  
+  - **Medición activa:** se actualizan los valores en pantalla.  
+  - **Pausa:** se mantiene la última lectura y deja de actualizar.
+- Los valores mostrados incluyen:  
+  - Lectura ADC (0–1023)  
+  - Voltaje (0–5 V)  
+  - Conductividad estimada (mS/cm)
 
 ---
 
 ## 🧪 Notas técnicas
 
-- El valor por defecto de `maxConductivity` es 50.0 mS/cm.
-- La fórmula de conversión es lineal y puede personalizarse según el sensor.
-- Para mayor precisión, calibrar con soluciones patrón.
-- El botón está conectado a GND y usa `INPUT_PULLUP` para simplicidad.
+- El botón está conectado a GND y usa `INPUT_PULLUP` para simplicidad y menor hardware.
+- El antirrebote está implementado con temporización para evitar lecturas falsas.
+- La pantalla OLED debe estar correctamente conectada y configurada con la dirección I2C 0x3C.
+- La fórmula de conversión es lineal, ajustable con la constante `maxConductivity`.
+- Se recomienda usar una fuente de alimentación estable para evitar fluctuaciones en la lectura ADC.
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto está licenciado bajo la **GNU General Public License v3.0 (GPL-3.0)**.  
+Este proyecto está licenciado bajo la [GNU General Public License v3.0 (GPL-3.0)](https://www.gnu.org/licenses/gpl-3.0.html).
+
 Podés usarlo, modificarlo y redistribuirlo bajo los términos de esta licencia.
 
 ---
 
 ## ✍️ Autor
 
-**Paulina Juich**  
+Paulina Juich  
 Julio 2025
 
 ---
