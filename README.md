@@ -139,9 +139,14 @@ Para mejorar la precisión, es recomendable calibrar el sensor con soluciones pa
 
 ## 📄 Licencia
 
-Este proyecto está licenciado bajo la [GNU General Public License v3.0 (GPL-3.0)](https://www.gnu.org/licenses/gpl-3.0.html).
+© 2025 Paulina Juich. Todos los derechos reservados.
 
-Podés usarlo, modificarlo y redistribuirlo bajo los términos de esta licencia.
+Este diseño, documentación y código están protegidos por la legislación de propiedad intelectual. 
+
+🧠 El uso personal, académico o educativo sin fines de lucro está permitido con atribución.
+💰 Cualquier uso comercial, distribución, modificación o integración en productos requiere una licencia paga o autorización expresa.
+
+Contacto para licencias: paulinajuich4@gmail.com
 
 ---
 
