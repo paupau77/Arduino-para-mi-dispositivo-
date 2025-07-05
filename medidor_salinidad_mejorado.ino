@@ -1,9 +1,16 @@
 /*
   Medidor de Salinidad con Arduino y Pantalla OLED
   Autor: Paulina Juich
-  Licencia: GPL-3.0
+  Licencia: © 2025 Paulina Juich. Todos los derechos reservados.
 
-  Proyecto mejorado con:
+Este diseño, documentación y código están protegidos por la legislación de propiedad intelectual. 
+
+🧠 El uso personal, académico o educativo sin fines de lucro está permitido con atribución.
+💰 Cualquier uso comercial, distribución, modificación o integración en productos requiere una licencia paga o autorización expresa.
+
+Contacto para licencias: paulinajuich4@gmail.com
+
+  Mi código va mejorado con:
   - Calibración ajustable con soluciones patrón
   - Comentarios detallados en el código
   - Manejo básico de errores en sensor y pantalla
