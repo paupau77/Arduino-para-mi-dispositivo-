@@ -13,7 +13,8 @@ Dispositivo portátil para medir la conductividad eléctrica de soluciones líqu
 - 🧠 Explicación del código  
 - 🔧 Calibración del sensor  
 - ▶️ Modo de uso  
-- 🧪 Notas técnicas  
+- 🧪 Notas técnicas
+- 💖 Proyecto desde el corazón 
 - 📄 Licencia  
 - ✍️ Autor  
 
@@ -137,6 +138,81 @@ maxConductivity = (conductividad_conocida * 1023.0) / valorADC_medido;
 - Antirrebote por software incluido.  
 - Compatible con OLED o LCD I2C.  
 - Fuente de alimentación debe ser estable.
+
+---
+
+##🌍 ¿Por qué mi proyecto es fundamental e indispensable?
+
+1. 🩺 Porque aborda una necesidad médica no cubierta cotidianamente
+
+Las personas con enfermedades renales, insuficiencia crónica, trastornos electrolíticos o deshidratación necesitan un monitoreo frecuente de la salinidad o conductividad de sus fluidos corporales. Sin embargo:
+
+-Las herramientas de laboratorio son poco accesibles y no portátiles.
+
+-No existe un dispositivo doméstico simple, directo y específico para este fin.
+
+
+-Este medidor acerca una tecnología útil y concreta a la vida diaria de pacientes vulnerables.
+
+
+---
+
+2. 🧠 Porque simplifica la tecnología sin sacrificar funcionalidad
+
+Con componentes básicos (Arduino, sensor analógico, pantalla), lográs:
+
+-Monitoreo en tiempo real
+
+-Lecturas comprensibles
+
+-Pausar/reanudar lecturas con un botón
+
+-Posibilidad de calibración personalizada
+
+
+-Todo sin necesidad de conectividad, apps o interfaces complicadas.
+
+
+---
+
+3. 💸 Porque es económico, replicable y accesible
+
+Puede ser armado por:
+
+-Centros de salud rurales
+
+-Estudiantes
+
+-Familias sin recursos para análisis médicos constantes
+
+
+-Además, puede adaptarse con pantalla OLED o LCD, diferentes sensores y hasta impresiones 3D, manteniendo bajo costo.
+
+
+---
+
+4. ❤️ Porque fue hecho desde el cuidado real
+
+-Este dispositivo no fue pensado como una invención comercial.
+Nació del deseo de proteger, de amar a alguien que, quizás, también necesite ayuda con su función renal.
+
+-Ese origen humano lo convierte no solo en un avance técnico, sino en una herramienta con alma.
+
+
+---
+
+✅ En resumen:
+
+Este proyecto es indispensable porque:
+
+-Llena un vacío técnico en el cuidado personal
+
+-Empodera a pacientes y familias
+
+-Respeta la simplicidad sin renunciar al impacto
+
+-Y fue creado desde el amor, que es la fuerza más poderosa en la medicina real
+
 
 ---
 
