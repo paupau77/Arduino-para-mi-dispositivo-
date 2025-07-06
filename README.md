@@ -141,7 +141,7 @@ maxConductivity = (conductividad_conocida * 1023.0) / valorADC_medido;
 
 ---
 
-##🌍 ¿Por qué mi proyecto es fundamental e indispensable?
+## 🌍 ¿Por qué mi proyecto es fundamental e indispensable?
 
 1. 🩺 Porque aborda una necesidad médica no cubierta cotidianamente
 
