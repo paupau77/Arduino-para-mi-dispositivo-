@@ -66,7 +66,7 @@ Dispositivo portátil para medir la conductividad eléctrica de soluciones líqu
 1. Abrí el archivo `medidor_salinidad_mejorado.ino` en el IDE de Arduino.  
 2. Instalá las siguientes librerías desde el Gestor de Librerías:  
    - `Adafruit SSD1306`  
-   - `Adafruit GFX`  
+   - `Adafruit GFX`  (las dos librerías adafruit son necesarias solo si se usa la pantalla SSD1306)
    - `LiquidCrystal_I2C` (si usás LCD)  
 3. Conectá los componentes según el esquema.  
 4. Cargá el sketch en tu placa Arduino.  
