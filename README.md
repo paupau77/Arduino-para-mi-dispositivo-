@@ -9,7 +9,7 @@ Dispositivo portátil para medir la conductividad eléctrica de soluciones líqu
 - 🔧 Componentes  
 - 🔌 Esquema de conexión  
 - ⚙️ Instalación y dependencias  
-- 📺 Pantalla OLED SSD1306 (I2C) - Información importante  
+- 📺 Pantalla OLED SSD1306 (I2C) (o La LCD 16*2)- Información importante  
 - 🧠 Explicación del código  
 - 🔧 Calibración del sensor  
 - ▶️ Modo de uso  
@@ -72,11 +72,11 @@ Dispositivo portátil para medir la conductividad eléctrica de soluciones líqu
 
 ---
 
-## 📺 Pantalla OLED SSD1306 (I2C) - Información importante
+## 📺 Pantalla OLED SSD1306 (I2C) (o La LCD 16*2) - Información importante
 
 ### 🔋 Alimentación y niveles lógicos
 
-- Las pantallas OLED SSD1306 pueden funcionar a **3.3 V o 5 V**, dependiendo del modelo.  
+- Las pantallas OLED SSD1306 pueden funcionar a **3.3 V o 5 V**, dependiendo del modelo. La LCD 16*2 también funciona a 5v 
 - **Antes de conectar, verificá el voltaje de operación de tu pantalla.**  
 - Si tu pantalla es de **3.3 V y Arduino funciona a 5 V**, recomendamos usar un **convertidor de nivel lógico** en las líneas SDA y SCL para evitar daños o problemas de comunicación.  
 - Algunos módulos ya tienen reguladores y adaptadores de nivel integrados, pero no todos, así que ¡cuidado!
