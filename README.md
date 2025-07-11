@@ -151,7 +151,7 @@ No sé si alguna vez entenderá que este proyecto nació por y para él.
 Pero yo sí lo sé.
 Y eso, para mí, es sagrado.
 Con esto, mi amor queda por siempre plasmado.
-Y además wstoy feliz también, de a la gente, poder haber ayudado.💖
+Y además estoy feliz también, de a la gente, poder haber ayudado.💖
 
 Y también, a continuación te explico por qué mi medidor de salinidad básico con Arduino marca una diferencia real y tiene tanto valor:
 
