@@ -1,20 +1,19 @@
-# Medidor de Salinidad con Arduino y Pantalla OLED o LCD 16x2 I2C
 
-Dispositivo portátil para medir la conductividad eléctrica de soluciones líquidas, mostrando los valores en tiempo real en una pantalla OLED o LCD 16x2 I2C. Cuenta con un pulsador para pausar o reanudar la lectura.
+# Medidor de Salinidad Básico con Arduino UNO
+
+Dispositivo básico para medir la conductividad eléctrica de una muestra líquida (simulada con un potenciómetro), mostrando en pantalla LCD 16x2 I2C el voltaje, valor ADC y una estimación simple de la conductividad. Está preparado para incorporar una fórmula profesional que convierta la conductividad a salinidad real (g/L, ppt, etc) cuando se disponga.
 
 ---
 
 ## 📑 Índice
 
-- 🔧 Componentes  
-- 🔌 Esquema de conexión  
-- ⚙️ Instalación y dependencias  
-- 📺 Pantalla OLED SSD1306 (I2C) o LCD 16x2 I2C - Información importante  
-- 🧠 Explicación del código  
-- 🔧 Calibración del sensor  
-- ▶️ Modo de uso  
-- 🧪 Notas técnicas
-- 💖 Proyecto desde el corazón 
+- 🔧 Componentes
+- 🔌 Esquema de conexión
+- 🧠 Funcionamiento del sistema  
+- 💻 Código Arduino destacado  
+- 🧪 Estado actual  
+- 🚀 Posibles mejoras futuras
+- 💖 Mi proyecto fue hecho desde el corazón
 - 📄 Licencia  
 - ✍️ Autor  
 
@@ -62,167 +61,135 @@ Dispositivo portátil para medir la conductividad eléctrica de soluciones líqu
 
 ---
 
-## ⚙️ Instalación y dependencias
+## 🧠 Funcionamiento del sistema
 
-1. Abrí el archivo `medidor_salinidad_mejorado.ino` en el IDE de Arduino.  
-2. Instalá las siguientes librerías desde el Gestor de Librerías:  
-   - `Adafruit SSD1306`  
-   - `Adafruit GFX`  (las dos librerías adafruit son necesarias solo si se usa la pantalla SSD1306)
-   - `LiquidCrystal_I2C` (si usás LCD)  
-3. Conectá los componentes según el esquema.  
-4. Cargá el sketch en tu placa Arduino.  
-
----
-
-## 📺 Pantalla OLED SSD1306 (I2C) o LCD 16x2 I2C - Información importante
-
-### 🔋 Alimentación y niveles lógicos
-
-- Las pantallas OLED SSD1306 y LCD 16x2 I2C funcionan ambas a **5V** en sus versiones comunes.
-- Si usás un OLED que opera a 3.3V, se recomienda un convertidor de nivel lógico para SDA y SCL.
-- Algunos módulos ya tienen adaptadores de nivel integrados.
-
-### 🔌 Conexión recomendada
-
-| Pantalla               | Arduino UNO/Nano         |
-|------------------------|--------------------------|
-| VCC                   | 5 V                      |
-| GND                   | GND                      |
-| SDA                   | A4 (SDA)                 |
-| SCL                   | A5 (SCL)                 |
-
-### 🎯 Dirección I2C
-
-- OLED: comúnmente `0x3C`
-- LCD 16x2 I2C: comúnmente `0x27` o `0x3F`
-
-> Cambiá la dirección en el código si no coincide.
+- Lee periódicamente el valor analógico del sensor (potenciómetro en este prototipo) conectado al pin A0.  
+- Convierte ese valor ADC a voltaje y calcula una conductividad aproximada usando un valor máximo predefinido (50 mS/cm).  
+- Muestra en la pantalla LCD:  
+  - Voltaje medido  
+  - Conductividad estimada (mS/cm)  
+  - Valor ADC (0-1023)  
+- Envía los mismos datos por el puerto serie para monitoreo externo.  
+- Permite controlar el estado con un botón:  
+  - Pulsación corta: alterna entre medición activa y pausa  
+  - En pausa, muestra mensaje indicándolo y detiene la actualización de datos  
 
 ---
 
-## 🧠 Explicación del código
+## 💻 Código Arduino destacado
 
-- **setup()**: Configura pines, inicia comunicación serie, inicializa la pantalla y muestra mensaje de bienvenida.  
-- **loop()**:  
-  - Lee el estado del botón (con antirrebote).  
-  - En modo medición: lee el sensor, calcula voltaje y conductividad, muestra valores.  
-  - En modo pausa: muestra mensaje fijo.  
-- **convertirAConductividad()**: realiza la conversión lineal ADC → mS/cm.
-
----
-
-## 🔧 Calibración del sensor
-
-1. Preparar solución conocida (ejemplo: 10 mS/cm).  
-2. Medir valor ADC.  
-3. Ajustar `maxConductivity` con:
+- Usa la librería `LiquidCrystal_I2C` para controlar la pantalla LCD 16x2 vía I2C.  
+- Implementa antirrebote software para lectura estable del botón.  
+- La fórmula para convertir ADC a conductividad está parametrizada con una variable `maxConductividad`.  
+- **Preparado para incorporar la fórmula profesional que convierta conductividad a salinidad real**, con un bloque comentado para añadir la ecuación bioquímica cuando esté disponible:  
 
 ```cpp
-maxConductivity = (conductividad_conocida * 1023.0) / valorADC_medido;
+// ⚠️ FÓRMULA DE CALIBRACIÓN PENDIENTE:
+// Aquí se debe ingresar la ecuación proporcionada por el profesional bioquímico
+// para convertir la conductividad (en mS/cm) a salinidad (en g/L, ppt, etc).
+// Ejemplo cuando esté disponible:
+// float salinidad = 0.42 * pow(conductividad, 2) - 1.6 * conductividad + 0.9;
 ```
 
 ---
 
-## ▶️ Modo de uso
+## 🧪 Estado actual
 
-- Al encender, muestra mensaje de bienvenida.  
-- Pulsá el botón para alternar entre:  
-  - **Medición activa:** valores actualizados  
-  - **Pausa:** valores congelados  
-
----
-
-## 🧪 Notas técnicas
-
-- Botón con `INPUT_PULLUP` no necesita resistencia externa.  
-- Antirrebote por software incluido.  
-- Compatible con OLED o LCD I2C.  
-- Fuente de alimentación debe ser estable.
+- ✅ Funciona correctamente en simuladores (Tinkercad, Wokwi).  
+- ✅ Mide valores analógicos simulados por potenciómetro.  
+- ✅ Muestra datos correctamente en pantalla LCD.  
+- ✅ Permite pausar y reanudar mediciones con botón.  
+- 🕐 A la espera de integración de fórmula profesional para conversión precisa a salinidad.  
 
 ---
 
-## 🌍 ¿Por qué mi proyecto es fundamental e indispensable?
+## 🚀 Posibles mejoras futuras
 
-1. 🩺 Porque aborda una necesidad médica no cubierta cotidianamente
+- Incorporar la fórmula química o bioquímica para convertir conductividad a salinidad real.  
+- Alertas led
+---
 
-Las personas con enfermedades renales, insuficiencia crónica, trastornos electrolíticos o deshidratación necesitan un monitoreo frecuente de la salinidad o conductividad de sus fluidos corporales. Sin embargo:
-
--Las herramientas de laboratorio son poco accesibles y no portátiles.
-
--No existe un dispositivo doméstico simple, directo y específico para este fin.
-
-
--Este medidor acerca una tecnología útil y concreta a la vida diaria de pacientes vulnerables.
+##  💖 Mi proyecto fue hecho desde el corazón
+A continuación te explico por qué mi medidor de salinidad básico con Arduino marca una diferencia real y tiene tanto valor:
 
 
 ---
 
-2. 🧠 Porque simplifica la tecnología sin sacrificar funcionalidad
+🌍 1. Democratiza la medición de conductividad y salinidad
 
-Con componentes básicos (Arduino, sensor analógico, pantalla), lográs:
+Mi dispositivo usa componentes accesibles y económicos, permitiendo que cualquier persona, desde un estudiante hasta un docente de escuela técnica, pueda medir la conductividad de una muestra.
 
--Monitoreo en tiempo real
-
--Lecturas comprensibles
-
--Pausar/reanudar lecturas con un botón
-
--Posibilidad de calibración personalizada
-
-
--Todo sin necesidad de conectividad, apps o interfaces complicadas.
 
 
 ---
 
-3. 💸 Porque es económico, replicable y accesible
+🧪 2. Base para investigación científica en campo
 
-Puede ser armado por:
+Es una herramienta práctica para iniciar proyectos de investigación en biología, química o medicina, incluso en zonas con pocos recursos.
 
--Centros de salud rurales
+Puede usarse para monitoreo de salud (sudor/orina), donde medir la salinidad es clave.
 
--Estudiantes
-
--Familias sin recursos para análisis médicos constantes
-
-
--Además, puede adaptarse con pantalla OLED o LCD, diferentes sensores y hasta impresiones 3D, manteniendo bajo costo.
 
 
 ---
 
-4. ❤️ Porque fue hecho desde el cuidado real
+🧰 3. Diseño modular, ampliable y profesional
 
--Este dispositivo no fue pensado como una invención comercial.
-Nació del deseo de proteger, de amar a alguien que, quizás, también necesite ayuda con su función renal.
+El código y estructura están preparados para futuras ampliaciones:
 
--Ese origen humano lo convierte no solo en un avance técnico, sino en una herramienta con alma.
+Mostrar salinidad real cuando se disponga de la fórmula profesional.
+
+Alertas leds.
+
+
 
 
 ---
 
-✅ En resumen:
+🔍 5. Prototipo que respeta la lógica científica
 
-Este proyecto es indispensable porque:
+Mide, calcula y muestra resultados de forma precisa y coherente.
 
--Llena un vacío técnico en el cuidado personal
+No intenta inventar números ni sobreinterpretar: está preparado para que un profesional realice la calibración y se sume al sistema con su conocimiento.
 
--Empodera a pacientes y familias
 
--Respeta la simplicidad sin renunciar al impacto
 
--Y fue creado desde el amor, que es la fuerza más poderosa en la medicina real
+---
+
+💡 6. Pone la tecnología al servicio del conocimiento
+
+En vez de limitarse a jugar con electrónica, mi proyecto está pensado para resolver problemas reales, como:
+
+
+Monitoreo de salud (sudor/orina).
+
+Evaluar la hidratación en deportistas.
+
+Detectar cambios en muestras biológicas.
+
+
+
+
+---
+
+❤️ 7. Porque fue hecho con dedicación, aprendizaje y visión
+
+Mi proyecto es auténtico: enfrentó límites, se adaptó, se documentó con claridad, y se preparó para el futuro.
+
+Es un ejemplo de lo que puede lograrse con pensamiento crítico, sin necesidad de recursos infinitos ni laboratorios de élite.
+
+Avanti todos los profesionales de la informática que tenemos ganas de ayudar.💖
+
 
 
 ---
 
 ## 📄 Licencia
 
-
 © 2025 Paulina Juich. Todos los derechos reservados.
 
 - Uso personal, académico o educativo sin fines de lucro permitido con atribución.  
-- Uso comercial, distribución, modificación o integración en productos requiere licencia paga o autorización expresa.  
+- Uso comercial o distribución requiere licencia o autorización expresa.  
 
 Contacto para licencias: [paulinajuich4@gmail.com](mailto:paulinajuich4@gmail.com)
 
@@ -232,5 +199,13 @@ Contacto para licencias: [paulinajuich4@gmail.com](mailto:paulinajuich4@gmail.co
 
 Paulina Juich  
 Julio 2025
+
+---
+
+### 🙌 Nota final
+
+Este proyecto es un prototipo funcional con base sólida, creado con pasión y cuidado, que espera ser convertirse en una herramienta útil en monitoreo de líquidos biológicos o ambientales.
+
+```
 
 ---
