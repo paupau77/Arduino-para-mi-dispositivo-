@@ -8,6 +8,7 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 
 - 🔧 Componentes
 - 🔌 Esquema de conexión
+- 📷 Esquemas & simuladores
 - 🧠 Funcionamiento del sistema  
 - 💻 Código Arduino destacado  
 - 🧪 Estado actual  
