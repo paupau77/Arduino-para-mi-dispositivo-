@@ -60,6 +60,18 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 
 ---
 
+## 📷 Desde los simuladores
+
+![Esquema de Tinkercad](esquema_tinkercad.png)
+
+*Figura 2: Esquema de la simulación de Tinkercad.*
+
+![El dispositivo en los simuladores](simuladores.png)
+
+*Figura 3: El dispositivo en los simuladores.*
+
+---
+
 ## 🧠 Funcionamiento del sistema
 
 - Lee periódicamente el valor analógico del sensor (potenciómetro en este prototipo) conectado al pin A0.  
