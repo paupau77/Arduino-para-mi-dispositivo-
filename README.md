@@ -243,7 +243,8 @@ Contacto para licencias: [paulinajuich4@gmail.com](mailto:paulinajuich4@gmail.co
 
 Paulina Juich
 
-Técnica Analista Universitaria de Sistemas, Tech Support IT, Programadora de PC de la UTN, autora y desarrolladora de este dispositivo, su diseño técnico, lógico y funcional.  
+Técnica Analista Universitaria de Sistemas, Tech Support IT, Programadora de PC de la UTN, autora y desarrolladora de este dispositivo, su diseño técnico, lógico y funcional. 
+ 
 Julio 2025
 
 ---
