@@ -17,7 +17,8 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 - [Mi proyecto fue hecho desde el corazón](#mi-proyecto-fue-hecho-desde-el-corazón)
 - [Licencia](#licencia)
 - [Autoría](#autoría)
-- [Nota final](#-nota-final)
+- [🙌 Nota final](#-nota-final)
+
 
 ---
 
