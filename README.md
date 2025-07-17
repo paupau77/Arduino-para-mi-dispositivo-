@@ -6,16 +6,17 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 
 ## 📋 Índice
 
-- 🔧 [Componentes](#-componentes)  
-- 🔌 [Esquema de conexión](#-esquema-de-conexión)  
-- 📷 [Esquemas & simuladores](#-esquemas--simuladores)  
-- 🧠 [Funcionamiento del sistema](#-funcionamiento-del-sistema)  
-- 💻 [Código Arduino destacado](#-código-arduino-destacado)  
-- 🧪 [Estado actual](#-estado-actual)  
-- 🚀 [Posibles mejoras futuras](#-posibles-mejoras-futuras)  
-- 💖 [Mi proyecto fue hecho desde el corazón](#-mi-proyecto-fue-hecho-desde-el-corazón)  
-- 📄 [Licencia](#-licencia)  
-- ✍️ [Autora](#-autora) 
+- [🔧 Componentes](#-componentes)  
+- [🔌 Esquema de conexión](#-esquema-de-conexión)  
+- [📷 Esquema de conexión del circuito](#-esquema-de-conexión-del-circuito)  
+- [📷 Desde los simuladores](#-desde-los-simuladores)  
+- [🧠 Funcionamiento del sistema](#-funcionamiento-del-sistema)  
+- [💻 Código Arduino destacado](#-código-arduino-destacado)  
+- [🧪 Estado actual](#-estado-actual)  
+- [🚀 Posibles mejoras futuras](#-posibles-mejoras-futuras)  
+- [💖 Mi proyecto fue hecho desde el corazón](#-mi-proyecto-fue-hecho-desde-el-corazón)  
+- [📄 Licencia](#-licencia)  
+- [✍️ Autora](#-autora)
 
 ---
 
