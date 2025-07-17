@@ -6,23 +6,20 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 
 ## 📋 Índice
 
-- [Componentes](#componentes)
-- [Esquema de conexión](#esquema-de-conexión)
-- [Esquema de conexión del circuito](#esquema-de-conexión-del-circuito)
-- [Desde los simuladores](#desde-los-simuladores)
-- [Funcionamiento del sistema](#funcionamiento-del-sistema)
-- [Código Arduino destacado](#código-arduino-destacado)
-- [Estado actual](#estado-actual)
-- [Posibles mejoras futuras](#posibles-mejoras-futuras)
-- [Mi proyecto fue hecho desde el corazón](#mi-proyecto-fue-hecho-desde-el-corazón)
-- [Licencia](#licencia)
-- [Autoría](#autoría)
-- [🙌 Nota final](#-nota-final)
+- 🔧 Componentes
+- 🔌 Esquema de conexión
+- 🧠 Funcionamiento del sistema  
+- 💻 Código Arduino destacado  
+- 🧪 Estado actual  
+- 🚀 Posibles mejoras futuras
+- 💖 Mi proyecto fue hecho desde el corazón
+- 📄 Licencia  
+- ✍️ Autora 
 
 
 ---
 
-## Componentes
+##  🔧 Componentes
 
 | Componente              | Cantidad             |
 |------------------------|----------------------|
@@ -35,7 +32,7 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 
 ---
 
-## Esquema de conexión
+##  🔌 Esquema de conexión
 
 - **Sensor de conductividad:**  
   - Salida analógica → Pin `A0` del Arduino
@@ -56,7 +53,7 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 
 ---
 
-## Esquema de conexión del circuito
+## 📷 Esquema de conexión del circuito
 
 ![Esquema de conexión](esquema_conexion.png)
 
@@ -64,7 +61,7 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 
 ---
 
-## Desde los simuladores
+## 📷 Desde los simuladores
 
 ![Esquema de Tinkercad](esquema_tinkercad.png)
 
@@ -76,7 +73,7 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 
 ---
 
-## Funcionamiento del sistema
+## 🧠 Funcionamiento del sistema
 
 - Lee periódicamente el valor analógico del sensor (potenciómetro en este prototipo) conectado al pin A0.  
 - Convierte ese valor ADC a voltaje y calcula una conductividad aproximada usando un valor máximo predefinido (50 mS/cm).  
@@ -91,7 +88,7 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 
 ---
 
-## Código Arduino destacado
+##  💻 Código Arduino destacado
 
 - Usa la librería `LiquidCrystal_I2C` para controlar la pantalla LCD 16x2 vía I2C.  
 - Implementa antirrebote software para lectura estable del botón.  
@@ -108,7 +105,7 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 
 ---
 
-## Estado actual
+##  🧪 Estado actual
 
 - ✅ Funciona correctamente en simuladores (Tinkercad, Wokwi).  
 - ✅ Mide valores analógicos simulados por potenciómetro.  
@@ -118,13 +115,13 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 
 ---
 
-## Posibles mejoras futuras
+##  🚀 Posibles mejoras futuras
 
 - Incorporar la fórmula química o bioquímica para convertir conductividad a salinidad real.  
 - Alertas led
 ---
 
-## Mi proyecto fue hecho desde el corazón
+## 💖 Mi proyecto fue hecho desde el corazón
 Este proyecto no nació en un laboratorio. Nació en mi $${\color{pink} corazón }$$.
 
 No surgió de la técnica ni de la lógica, sino de un sentimiento $${\color{pink} profundo }$$, de esos que te atraviesan el alma y te mueven a crear desde el corazón.
@@ -231,7 +228,7 @@ Avanti todos los profesionales de la informática que tenemos ganas de ayudar.�
 
 ---
 
-## Licencia
+##  📄 Licencia
 
 © 2025 Paulina Juich. Todos los derechos reservados.
 
@@ -242,7 +239,7 @@ Contacto para licencias: [paulinajuich4@gmail.com](mailto:paulinajuich4@gmail.co
 
 ---
 
-## Autoría
+## ✍️ Autora
 
 Paulina Juich  
 Julio 2025
