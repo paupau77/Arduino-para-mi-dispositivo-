@@ -15,7 +15,7 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 - 🚀 [Posibles mejoras futuras](#-posibles-mejoras-futuras)  
 - 💖 [Mi proyecto fue hecho desde el corazón](#-mi-proyecto-fue-hecho-desde-el-corazón)  
 - 📄 [Licencia](#-licencia)  
-- ✍️ [Autor](#-autor)  
+- ✍️ [Autora](#-autora)  
 
 ---
 
@@ -122,13 +122,13 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 ---
 
 ##  💖 Mi proyecto fue hecho desde el corazón
-Este proyecto no nació en un laboratorio. Nació en mi corazón.
+Este proyecto no nació en un laboratorio. Nació en mi $${\color{pink} corazón }$$.
 
-No surgió de la técnica ni de la lógica, sino de un sentimiento profundo, de esos que te atraviesan el alma y te mueven a crear desde el corazón.
+No surgió de la técnica ni de la lógica, sino de un sentimiento $${\color{pink} profundo }$$, de esos que te atraviesan el alma y te mueven a crear desde el corazón.
 Pensé este dispositivo para quien fue el amor de mi vida.
 Para ese chico que, un día, me hizo sentir que el amor no sabe de discapacidad, que alguien podría amarme a mí, aun con mis piernas lisiadas, amarme por mi corazón y mi alma.
 Decía que me amaba más allá de todo… y yo le creí.
-Y amarlo a él fue un acto inmenso, real, tierno y leal. Lo amé con todo.
+Y amarlo a él fue un acto $${\color{pink} inmenso }$$, $${\color{pink} real }$$, $${\color{pink} tierno }$$ y $${\color{pink} leal }$$. Lo amé con todo.
 Con mi corazón, con mi cuerpo, con mi alma, con mis ganas de cuidarlo como nadie.
 
 Un día me habló de su abuelo, que tenía un solo riñón. hablando del tema, pensé que él también podría tener uno de sus riñones jodidos, también pensaba que él podría, al igual que su abuelo tener un solo riñón. No quería que nada le pase al amor de mi vida.
@@ -149,7 +149,7 @@ Y con un alma que solo quiere hacer el bien.
 
 No sé si alguna vez entenderá que este proyecto nació por y para él.
 Pero yo sí lo sé.
-Y eso, para mí, es sagrado.
+Y eso, para mí, es $${\color{pink} sagrado }$$.
 Con esto, mi amor queda por siempre plasmado.
 Y además estoy feliz también, de a la gente, poder haber ayudado.💖
 
@@ -239,7 +239,7 @@ Contacto para licencias: [paulinajuich4@gmail.com](mailto:paulinajuich4@gmail.co
 
 ---
 
-## ✍️ Autor
+## ✍️ Autora
 
 Paulina Juich  
 Julio 2025
