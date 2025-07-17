@@ -6,8 +6,6 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 
 ## 📋 Índice
 
-## 📋 Índice
-
 - [Componentes](#componentes)  
 - [Esquema de conexión](#esquema-de-conexión)  
 - [Esquema de conexión del circuito](#esquema-de-conexión-del-circuito)  
@@ -17,9 +15,8 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 - [Estado actual](#estado-actual)  
 - [Posibles mejoras futuras](#posibles-mejoras-futuras)  
 - [Mi proyecto fue hecho desde el corazón](#mi-proyecto-fue-hecho-desde-el-corazón)  
-- [Por qué mi medidor marca una diferencia real](#por-qué-mi-medidor-marca-una-diferencia-real)  
 - [Licencia](#licencia)  
-- [Autora](#autora)
+- [Autoría](#autoría)  
 
 ---
 
@@ -243,7 +240,7 @@ Contacto para licencias: [paulinajuich4@gmail.com](mailto:paulinajuich4@gmail.co
 
 ---
 
-## Autora
+## Autoría
 
 Paulina Juich  
 Julio 2025
