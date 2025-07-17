@@ -161,7 +161,7 @@ Y también, a continuación te explico por qué mi medidor de salinidad básico 
 
 🌍 1. Democratiza la medición de conductividad y salinidad
 
-Mi dispositivo usa componentes accesibles y económicos, permitiendo que cualquier persona, desde un estudiante hasta un docente de escuela técnica, pueda medir la conductividad de una muestra.
+Mi dispositivo usa componentes accesibles y económicos, permitiendo que cualquier persona, bioquímico, paciente renal, deportista, estudiante o hasta un docente de escuela técnica, etc. pueda medir la conductividad de una muestra.
 
 
 
