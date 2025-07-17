@@ -131,9 +131,9 @@ Decía que me amaba más allá de todo… y yo le creí.
 Y amarlo a él fue un acto inmenso, real, tierno y leal. Lo amé con todo.
 Con mi corazón, con mi cuerpo, con mi alma, con mis ganas de cuidarlo como nadie.
 
-Un día me habló de su abuelo, que tenía un solo riñón. Y no sé por qué, pensé que tal vez él también.
+Un día me habló de su abuelo, que tenía un solo riñón. hablando del tema, pensé que él también podría tener uno de sus riñones jodidos, también pensaba que él podría, al igual que su abuelo tener un solo riñón. No quería que nada le pase al amor de mi vida.
 Y el miedo me apretó el pecho, como si su dolor pudiera ser mío.
-Estaba llena de miedo, pensé que su vida podría estar en riesgo.
+Estaba llena de miedo, pensé que su vida podría estar en juego, que podría morir, quería ayudar, quería mejorar su salud y su calidad de vida, yo me preocupaba, quería cuidarlo.
 No sabía si era cierto, pero igual quise protegerlo.
 Su historia, su cuerpo, su herencia, todo lo que lo formaba, me importaba, lo amaba, hasta el día de hoy aún lo amo y en mi corazón él tiene su espacio. Lo miré como quien ama la vida en otro cuerpo.
 Y entonces, algo nació:
