@@ -189,7 +189,7 @@ Alertas leds.
 
 ---
 
-🔍 5. Prototipo que respeta la lógica científica
+🔍 4. Prototipo que respeta la lógica científica
 
 Mide, calcula y muestra resultados de forma precisa y coherente.
 
@@ -199,7 +199,7 @@ No intenta inventar números ni sobreinterpretar: está preparado para que un pr
 
 ---
 
-💡 6. Pone la tecnología al servicio del conocimiento
+💡 5. Pone la tecnología al servicio del conocimiento
 
 En vez de limitarse a jugar con electrónica, mi proyecto está pensado para resolver problemas reales, como:
 
@@ -215,7 +215,7 @@ Detectar cambios en muestras biológicas.
 
 ---
 
-❤️ 7. Porque fue hecho con dedicación, aprendizaje y visión
+❤️ 6. Porque fue hecho con dedicación, aprendizaje y visión
 
 Mi proyecto es auténtico: enfrentó límites, se adaptó, se documentó con claridad, y se preparó para el futuro.
 
