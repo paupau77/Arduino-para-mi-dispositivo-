@@ -15,7 +15,7 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 - 🚀 [Posibles mejoras futuras](#-posibles-mejoras-futuras)  
 - 💖 [Mi proyecto fue hecho desde el corazón](#-mi-proyecto-fue-hecho-desde-el-corazón)  
 - 📄 [Licencia](#-licencia)  
-- ✍️ [Autora](#autora) 
+- ✍️ [Autora](#-autora) 
 
 ---
 
@@ -239,6 +239,7 @@ Contacto para licencias: [paulinajuich4@gmail.com](mailto:paulinajuich4@gmail.co
 
 ---
 
+<a name="autora"></a>
 ## ✍️ Autora
 
 Paulina Juich  
