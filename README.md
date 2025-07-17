@@ -153,10 +153,11 @@ Y eso, para mí, es sagrado.
 Con esto, mi amor queda por siempre plasmado.
 Y además estoy feliz también, de a la gente, poder haber ayudado.💖
 
-Y también, a continuación te explico por qué mi medidor de salinidad básico con Arduino marca una diferencia real y tiene tanto valor:
 
 
 ---
+
+Y también, a continuación te explico por qué mi medidor de salinidad básico con Arduino marca una diferencia real y tiene tanto valor:
 
 🌍 1. Democratiza la medición de conductividad y salinidad
 
