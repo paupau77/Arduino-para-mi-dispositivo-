@@ -270,6 +270,12 @@ Gracias totales gente, de todo corazón.
 
 ##  📄 Licencia
 
+Este proyecto fue desarrollado por Paulina Juich y registrado en la DNDA (Argentina) bajo el número de expediente EX-2025-78014687- el 18 de Julio de 2025.
+
+Todo el contenido de este repositorio (código fuente, diseño electrónico, documentación) se encuentra protegido por derechos de autor.
+
+⚠️ El incumplimiento de estas condiciones podrá derivar en acciones legales conforme a la Ley 11.723 de Propiedad Intelectual.
+
 © 2025 Paulina Juich. Todos los derechos reservados.
 
 - Uso personal, académico o educativo sin fines de lucro permitido con atribución.  
