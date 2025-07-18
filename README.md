@@ -263,7 +263,7 @@ Este proyecto no lleva solo mi nombre. Lleva los abrazos, los gestos, los apoyos
 Este logro es de todos.
 Gracias totales gente, de todo corazón.
 
-            Poli💖
+ .-Poli💖
 
 ---
 
