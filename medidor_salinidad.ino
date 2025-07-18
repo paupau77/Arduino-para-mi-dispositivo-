@@ -2,7 +2,14 @@
   Medidor de Salinidad Básico con Arduino UNO
 Dispositivo básico para medir la conductividad eléctrica de una muestra líquida (simulada con un potenciómetro), mostrando en pantalla LCD 16x2 I2C el voltaje, valor ADC y una estimación simple de la conductividad. Está preparado para incorporar una fórmula profesional que convierta la conductividad a salinidad real (g/L, ppt, etc) cuando se disponga.
   Autor: Paulina Juich
-  Licencia: © 2025 Paulina Juich. Todos los derechos reservados.
+  Licencia: 
+Este proyecto fue desarrollado por Paulina Juich y registrado en la DNDA (Argentina) bajo el número de expediente EX-2025-78014687- el 18 de Julio de 2025.
+
+Todo el contenido de este repositorio (código fuente, diseño electrónico, documentación) se encuentra protegido por derechos de autor.
+
+⚠️ El incumplimiento de estas condiciones podrá derivar en acciones legales conforme a la Ley 11.723 de Propiedad Intelectual.
+
+© 2025 Paulina Juich. Todos los derechos reservados.
 
 Este diseño, documentación y código están protegidos por la legislación de propiedad intelectual. 
 
