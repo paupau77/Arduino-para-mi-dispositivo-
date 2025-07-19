@@ -1,6 +1,7 @@
 # Medidor de Salinidad Básico con Arduino UNO
 
 [![Arduino](https://img.shields.io/badge/Platform-Arduino-blue)](https://www.arduino.cc/) 
+![Status](https://img.shields.io/badge/status-Activo-brightgreen)
 [![License](https://img.shields.io/github/license/paupau77/Arduino-para-mi-dispositivo-)](LICENSE)
 [![Issues](https://img.shields.io/github/issues/paupau77/Arduino-para-mi-dispositivo-)](https://github.com/paupau77/Arduino-para-mi-dispositivo-/issues)
 
