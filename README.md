@@ -18,7 +18,8 @@ Este proyecto fue creado con mucho ❤️ para ayudar en monitoreo de salud, qu�
 - 🔌 Esquema de conexión
 - 📷 Esquemas & simuladores
 - 🧠 Funcionamiento del sistema  
-- 💻 Código Arduino destacado  
+- 💻 Código Arduino destacado
+- 🧠 Funcionamiento del código  
 - 🧪 Estado actual  
 - 🚀 Posibles mejoras futuras
 - 💖 Mi proyecto fue hecho desde el corazón
@@ -111,6 +112,171 @@ Este proyecto fue creado con mucho ❤️ para ayudar en monitoreo de salud, qu�
 // Ejemplo cuando esté disponible:
 // float salinidad = 0.42 * pow(conductividad, 2) - 1.6 * conductividad + 0.9;
 ```
+
+---
+
+## 🧠 Funcionamiento del código 
+
+🧱 1. Librerías y creación del objeto LCD
+
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+Se importan las librerías necesarias para manejar la pantalla LCD por comunicación I2C.
+lcd(0x27, 16, 2) el display está en la dirección 0x27, con 16 columnas y 2 filas.
+
+
+---
+
+🧱 2. Pines y variables globales
+
+const int sensorPin = A0;
+const int buttonPin = 2;
+float maxConductividad = 50.0;
+bool medirActivo = true;
+bool botonPresionado = false;
+
+sensorPin es donde está conectado el potenciómetro (A0).
+
+buttonPin es el botón para pausar o reanudar.
+
+maxConductividad es el valor máximo que se puede medir (para escalar el resultado).
+
+medirActivo indica si está midiendo o en pausa.
+
+botonPresionado evita que el botón se dispare varias veces seguidas.
+
+
+
+---
+
+🧱 3. Variables para el tiempo de lectura
+
+unsigned long ultimaLectura = 0;
+const unsigned long intervaloLectura = 300;
+
+Permiten que la medición se actualice cada 300 milisegundos, sin usar delay().
+
+
+---
+
+🧱 4. setup()
+
+void setup() {
+  pinMode(sensorPin, INPUT);
+  pinMode(buttonPin, INPUT_PULLUP);
+  lcd.init();
+  lcd.backlight();
+  Serial.begin(9600);
+  lcd.setCursor(0, 0);
+  lcd.print("Medidor Salinidad");
+  lcd.setCursor(0, 1);
+  lcd.print("Iniciando...");
+  delay(2000);
+  lcd.clear();
+}
+
+Configura los pines.
+
+Inicializa el LCD y la comunicación serial.
+
+Muestra un mensaje de inicio por 2 segundos.
+
+
+
+---
+
+🧱 5. loop()
+
+void loop() {
+  leerBoton();
+
+  if (medirActivo && (millis() - ultimaLectura >= intervaloLectura)) {
+    ...
+    mostrarLectura(adc, voltaje, conductividad);
+    ...
+    ultimaLectura = millis();
+  }
+
+  if (!medirActivo) {
+    static bool pausaMostrada = false;
+    if (!pausaMostrada) {
+      ...
+      pausaMostrada = true;
+    }
+  }
+}
+
+Siempre revisa el botón con leerBoton().
+
+Si está midiendo y pasaron 300 ms:
+
+Lee el potenciómetro (analogRead)
+
+Convierte el valor a voltaje y a conductividad
+
+Muestra en pantalla y por serial
+
+
+Si está pausado, muestra un mensaje de pausa una sola vez.
+
+
+
+---
+
+🧱 6. leerBoton()
+
+void leerBoton() {
+  static unsigned long lastDebounceTime = 0;
+  static const unsigned long debounceDelay = 50;
+
+  bool estadoBoton = digitalRead(buttonPin) == LOW;
+
+  if (estadoBoton && !botonPresionado && (millis() - lastDebounceTime > debounceDelay)) {
+    botonPresionado = true;
+    medirActivo = !medirActivo;
+    Serial.println(medirActivo ? "MIDIENDO" : "PAUSADO");
+    lcd.clear();
+    lastDebounceTime = millis();
+  }
+
+  if (!estadoBoton && botonPresionado) {
+    botonPresionado = false;
+    lastDebounceTime = millis();
+  }
+}
+
+Este bloque maneja el botón con antirrebote:
+
+Solo cambia de estado si realmente se presionó.
+
+Evita falsos cambios por ruido eléctrico o rebotes físicos.
+
+
+
+---
+
+🧱 7. mostrarLectura()
+
+void mostrarLectura(int adc, float voltaje, float cond) {
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("V:"); lcd.print(voltaje, 1);
+  lcd.print(" C:"); lcd.print(cond, 1);
+  lcd.setCursor(0, 1);
+  lcd.print("ADC:"); lcd.print(adc);
+}
+
+Muestra en pantalla:
+
+El voltaje.
+
+La conductividad.
+
+El valor ADC (de 0 a 1023).
+
+
 
 ---
 
