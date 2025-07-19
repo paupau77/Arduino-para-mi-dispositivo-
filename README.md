@@ -1,6 +1,13 @@
 # Medidor de Salinidad Básico con Arduino UNO
 
+[![Arduino](https://img.shields.io/badge/Platform-Arduino-blue)](https://www.arduino.cc/) 
+[![License](https://img.shields.io/github/license/paupau77/Arduino-para-mi-dispositivo-)](LICENSE)
+[![Issues](https://img.shields.io/github/issues/paupau77/Arduino-para-mi-dispositivo-)](https://github.com/paupau77/Arduino-para-mi-dispositivo-/issues)
+
+
 Dispositivo básico para medir la conductividad eléctrica de una muestra líquida (simulada con un potenciómetro), mostrando en pantalla LCD 16x2 I2C el voltaje, valor ADC y una estimación simple de la conductividad. Está preparado para incorporar una fórmula profesional que convierta la conductividad a salinidad real (g/L, ppt, etc) cuando se disponga.
+
+Este proyecto fue creado con mucho ❤️ para ayudar en monitoreo de salud, química, biología, etc
 
 ---
 
@@ -16,8 +23,7 @@ Dispositivo básico para medir la conductividad eléctrica de una muestra líqui
 - 💖 Mi proyecto fue hecho desde el corazón
 - ♥️ Agradecimientos
 - 📄 Licencia  
-- ✍️ Autora 
-
+- ✍️ Autora
 
 ---
 
