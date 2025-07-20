@@ -1,10 +1,9 @@
 # Medidor de Salinidad Básico con Arduino UNO
 
-[![Arduino](https://img.shields.io/badge/Platform-Arduino-blue)](https://www.arduino.cc/) 
-![Status](https://img.shields.io/badge/status-Activo-brightgreen)
-[![License](https://img.shields.io/github/license/paupau77/Arduino-para-mi-dispositivo-)](LICENSE)
-[![Issues](https://img.shields.io/github/issues/paupau77/Arduino-para-mi-dispositivo-)](https://github.com/paupau77/Arduino-para-mi-dispositivo-/issues)
-
+![Arduino](https://img.shields.io/badge/Arduino-blue?style=flat-square&logo=arduino)
+![Estado](https://img.shields.io/badge/Estado-En%20Desarrollo-yellow?style=flat-square)
+![Licencia](https://img.shields.io/badge/Licencia-DNDA-important?style=flat-square)
+![Estado](https://img.shields.io/badge/Estado-Activo-brightgreen)
 
 Dispositivo básico para medir la conductividad eléctrica de una muestra líquida (simulada con un potenciómetro), mostrando en pantalla LCD 16x2 I2C el voltaje, valor ADC y una estimación simple de la conductividad. Está preparado para incorporar una fórmula profesional que convierta la conductividad a salinidad real (g/L, ppt, etc) cuando se disponga.
 
