@@ -300,7 +300,7 @@ El valor ADC (de 0 a 1023).
 Este proyecto no nació en un laboratorio. Nació en mi $${\color{pink} corazón }$$.
 
 No surgió de la técnica ni de la lógica, sino de un sentimiento $${\color{pink} profundo }$$, de esos que te atraviesan el alma y te mueven a crear desde el corazón.
-Pensé este dispositivo para quien fue el amor de mi vida.
+Pensé este dispositivo para quien fue el amor de mi vida, Agus Nicolás.
 Para ese chico que, un día, me hizo sentir que el amor no sabe de discapacidad, que alguien podría amarme a mí, aun con mis piernas lisiadas, amarme por mi corazón y mi alma.
 Decía que me amaba más allá de todo… y yo le creí.
 Y amarlo a él fue un acto $${\color{pink} inmenso }$$, $${\color{pink} real }$$, $${\color{pink} tierno }$$ y $${\color{pink} leal }$$. Lo amé con todo.
