@@ -117,7 +117,7 @@ Este proyecto fue creado con mucho ❤️ para ayudar en monitoreo de salud, qu�
 
 ## 🧠 Funcionamiento del código 
 
-🧱 1. Librerías y creación del objeto LCD
+💻 1. Librerías y creación del objeto LCD
 
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
@@ -129,7 +129,7 @@ lcd(0x27, 16, 2) el display está en la dirección 0x27, con 16 columnas y 2 fil
 
 ---
 
-🧱 2. Pines y variables globales
+👾 2. Pines y variables globales
 
 const int sensorPin = A0;
 const int buttonPin = 2;
@@ -151,7 +151,7 @@ botonPresionado evita que el botón se dispare varias veces seguidas.
 
 ---
 
-🧱 3. Variables para el tiempo de lectura
+⏱️ 3. Variables para el tiempo de lectura
 
 unsigned long ultimaLectura = 0;
 const unsigned long intervaloLectura = 300;
@@ -161,7 +161,7 @@ Permiten que la medición se actualice cada 300 milisegundos, sin usar delay().
 
 ---
 
-🧱 4. setup()
+🚀 4. setup()
 
 void setup() {
   pinMode(sensorPin, INPUT);
@@ -187,7 +187,7 @@ Muestra un mensaje de inicio por 2 segundos.
 
 ---
 
-🧱 5. loop()
+🔁 5. loop() (lo que se repite siempre, también es el corazón del programa)
 
 void loop() {
   leerBoton();
@@ -225,7 +225,7 @@ Si está pausado, muestra un mensaje de pausa una sola vez.
 
 ---
 
-🧱 6. leerBoton()
+🔘 6. leerBoton()
 
 void leerBoton() {
   static unsigned long lastDebounceTime = 0;
@@ -247,17 +247,21 @@ void leerBoton() {
   }
 }
 
-Este bloque maneja el botón con antirrebote:
+Es el manejo del botón con antirrebote
 
-Solo cambia de estado si realmente se presionó.
+Este bloque se asegura de que el botón no cause errores si rebota (señales falsas cuando lo apretás):
 
-Evita falsos cambios por ruido eléctrico o rebotes físicos.
+Detecta si el botón cambió de estado.
+
+Cambia el modo medirActivo a true o false.
+
+Borra la pantalla y actualiza mensajes según eso.
 
 
 
 ---
 
-🧱 7. mostrarLectura()
+📺 7. mostrarLectura() (básicamente lo que se ve en pantalla)
 
 void mostrarLectura(int adc, float voltaje, float cond) {
   lcd.clear();
