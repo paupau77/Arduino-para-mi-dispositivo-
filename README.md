@@ -323,7 +323,7 @@ Solo un dispositivo, un código, solo un circuito, sí. Pero también un acto de
 Un intento de cuidar, de acompañar, de ayudar.
 Por él. Por su abuelo. Por quienes lo necesiten.
 
-Porque a veces el amor también se expresa con sensores, con pantallas, con datos…
+Porque a veces el amor también se expresa con circuitos, con sensores, con pantallas, con datos…
 Y con un alma que solo quiere hacer el bien.
 
 No sé si alguna vez entenderá que este proyecto nació por y para él.
