@@ -450,10 +450,11 @@ Gracias totales gente, de todo corazón.
 Quiero expresar mi profundo agradecimiento a todas las personas que acompañaron este proyecto con su tiempo, apoyo y confianza.
 
 **👨‍🏫 Profe Sergio Daniel Conde**
+
 Este proyecto no estaría completo sin reconocer y agradecer profundamente al  
 **Profesor Dr. Sergio Daniel Conde**.  
 
-El profe Conde es, sin exagerar, uno de los mejores docentes que un estudiante puede tener.  
+El profe Sergio Conde es, sin exagerar, uno de los mejores docentes que un estudiante puede tener.  
 No solo por su inmenso recorrido académico (con múltiples distinciones, reconocimientos y premios que lo destacan a nivel nacional e internacional como referente en su área), sino porque combina esa brillantez con algo aún más valioso: **su calidad humana**.  
 
 Es un profesor que **cree en sus alumnos**, que les dedica tiempo real, que acompaña, escucha y da visibilidad a sus ideas. Tiene esa rara capacidad de hacer sentir que cada uno importa, que cada proyecto, incluso los más pequeños, valen la pena. Logra lo que pocos: unir lo académico con lo humano, la ciencia con el corazón.  
