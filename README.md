@@ -449,10 +449,23 @@ Gracias totales gente, de todo corazón.
 
 Quiero expresar mi profundo agradecimiento a todas las personas que acompañaron este proyecto con su tiempo, apoyo y confianza.
 
-**👨‍🏫 Profesor Sergio Daniel Conde**  
-Gracias por tu apoyo constante, por dar visibilidad a mi trabajo y, sobre todo, por creer en mí.  
-Tu acompañamiento fue clave para que este proyecto pueda crecer y encontrar un lugar en la comunidad.
+**👨‍🏫 Profe Sergio Daniel Conde**
+Este proyecto no estaría completo sin reconocer y agradecer profundamente al  
+**Profesor Dr. Sergio Daniel Conde**.  
 
+El profe Conde es, sin exagerar, uno de los mejores docentes que un estudiante puede tener.  
+No solo por su inmenso recorrido académico —con múltiples distinciones, reconocimientos y premios que lo destacan a nivel nacional e internacional como referente en su área—, sino porque combina esa brillantez con algo aún más valioso: **su calidad humana**.  
+
+Es un profesor que **cree en sus alumnos**, que les dedica tiempo real, que acompaña, escucha y da visibilidad a sus ideas. Tiene esa rara capacidad de hacer sentir que cada uno importa, que cada proyecto, incluso los más pequeños, vale la pena. Logra lo que pocos: unir lo académico con lo humano, la ciencia con el corazón.  
+
+En su carrera ha recibido numerosos **premios y menciones** por su labor, tanto en investigación como en docencia, pero quienes tuvimos la suerte de estar en sus clases sabemos que su mayor premio es la huella que deja en cada estudiante.  
+Es un **genio en lo profesional**, pero también alguien profundamente **amoroso, cercano y generoso**.  
+
+Por todo esto, quiero agradecerte de corazón, profe, por el apoyo, por darle visibilidad a este proyecto, por creer en mí incluso en los momentos en que yo misma dudaba. Gracias por demostrar con tu ejemplo que la enseñanza no es solo transmitir conocimiento, sino también inspirar, motivar y tender la mano.  
+
+Este proyecto también lleva tu huella, porque detrás de cada idea que se concreta hay un eco de tu empuje, tu confianza y tu fe en que los estudiantes podemos lograr grandes cosas.  
+
+**Con admiración, gratitud y cariño inmenso: gracias, profe.**
 ---
 
 ##  📄 Licencia
