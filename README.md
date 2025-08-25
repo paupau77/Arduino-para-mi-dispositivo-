@@ -24,6 +24,7 @@ Este proyecto fue creado con mucho ❤️ para ayudar en monitoreo de salud, qu�
 - 🚀 Posibles mejoras futuras
 - 💖 Mi proyecto fue hecho desde el corazón
 - ♥️ Agradecimientos
+- 🙌 Créditos
 - 📄 Licencia  
 - ✍️ Autora
 
@@ -444,6 +445,15 @@ Gracias totales gente, de todo corazón.
 
 ---
 
+## 🙌 Créditos
+
+Quiero expresar mi profundo agradecimiento a todas las personas que acompañaron este proyecto con su tiempo, apoyo y confianza.
+
+**👨‍🏫 Profesor Sergio Daniel Conde**  
+Gracias por tu apoyo constante, por dar visibilidad a mi trabajo y, sobre todo, por creer en mí.  
+Tu acompañamiento fue clave para que este proyecto pueda crecer y encontrar un lugar en la comunidad.
+
+---
 
 ##  📄 Licencia
 
