@@ -454,9 +454,9 @@ Este proyecto no estaría completo sin reconocer y agradecer profundamente al
 **Profesor Dr. Sergio Daniel Conde**.  
 
 El profe Conde es, sin exagerar, uno de los mejores docentes que un estudiante puede tener.  
-No solo por su inmenso recorrido académico —con múltiples distinciones, reconocimientos y premios que lo destacan a nivel nacional e internacional como referente en su área—, sino porque combina esa brillantez con algo aún más valioso: **su calidad humana**.  
+No solo por su inmenso recorrido académico (con múltiples distinciones, reconocimientos y premios que lo destacan a nivel nacional e internacional como referente en su área), sino porque combina esa brillantez con algo aún más valioso: **su calidad humana**.  
 
-Es un profesor que **cree en sus alumnos**, que les dedica tiempo real, que acompaña, escucha y da visibilidad a sus ideas. Tiene esa rara capacidad de hacer sentir que cada uno importa, que cada proyecto, incluso los más pequeños, vale la pena. Logra lo que pocos: unir lo académico con lo humano, la ciencia con el corazón.  
+Es un profesor que **cree en sus alumnos**, que les dedica tiempo real, que acompaña, escucha y da visibilidad a sus ideas. Tiene esa rara capacidad de hacer sentir que cada uno importa, que cada proyecto, incluso los más pequeños, valen la pena. Logra lo que pocos: unir lo académico con lo humano, la ciencia con el corazón.  
 
 En su carrera ha recibido numerosos **premios y menciones** por su labor, tanto en investigación como en docencia, pero quienes tuvimos la suerte de estar en sus clases sabemos que su mayor premio es la huella que deja en cada estudiante.  
 Es un **genio en lo profesional**, pero también alguien profundamente **amoroso, cercano y generoso**.  
