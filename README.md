@@ -20,7 +20,8 @@ Este proyecto fue creado con mucho ❤️ para ayudar en monitoreo de salud, qu�
 - 🧠 Funcionamiento del sistema  
 - 💻 Código Arduino destacado
 - 🧠 Funcionamiento del código  
-- 🧪 Estado actual  
+- 🧪 Estado actual
+- 🦋 Nueva rama, progreso del mes de Agosto 2025 
 - 🚀 Posibles mejoras futuras
 - 💖 Mi proyecto fue hecho desde el corazón
 - ♥️ Agradecimientos
@@ -120,9 +121,11 @@ Este proyecto fue creado con mucho ❤️ para ayudar en monitoreo de salud, qu�
 
 💻 1. Librerías y creación del objeto LCD
 
+```cpp
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x27, 16, 2);
+```
 
 Se importan las librerías necesarias para manejar la pantalla LCD por comunicación I2C.
 lcd(0x27, 16, 2) el display está en la dirección 0x27, con 16 columnas y 2 filas.
@@ -132,21 +135,23 @@ lcd(0x27, 16, 2) el display está en la dirección 0x27, con 16 columnas y 2 fil
 
 👾 2. Pines y variables globales
 
+```cpp
 const int sensorPin = A0;
 const int buttonPin = 2;
 float maxConductividad = 50.0;
 bool medirActivo = true;
 bool botonPresionado = false;
+```
 
-sensorPin es donde está conectado el potenciómetro (A0).
+`sensorPin` es donde está conectado el potenciómetro (A0).
 
-buttonPin es el botón para pausar o reanudar.
+`buttonPin` es el botón para pausar o reanudar.
 
-maxConductividad es el valor máximo que se puede medir (para escalar el resultado).
+`maxConductividad` es el valor máximo que se puede medir (para escalar el resultado).
 
-medirActivo indica si está midiendo o en pausa.
+`medirActivo` indica si está midiendo o en pausa.
 
-botonPresionado evita que el botón se dispare varias veces seguidas.
+`botonPresionado` evita que el botón se dispare varias veces seguidas.
 
 
 
@@ -154,8 +159,10 @@ botonPresionado evita que el botón se dispare varias veces seguidas.
 
 ⏱️ 3. Variables para el tiempo de lectura
 
+```cpp
 unsigned long ultimaLectura = 0;
 const unsigned long intervaloLectura = 300;
+```
 
 Permiten que la medición se actualice cada 300 milisegundos, sin usar delay().
 
@@ -164,6 +171,7 @@ Permiten que la medición se actualice cada 300 milisegundos, sin usar delay().
 
 🚀 4. setup()
 
+```cpp
 void setup() {
   pinMode(sensorPin, INPUT);
   pinMode(buttonPin, INPUT_PULLUP);
@@ -177,6 +185,7 @@ void setup() {
   delay(2000);
   lcd.clear();
 }
+```
 
 Configura los pines.
 
@@ -190,6 +199,7 @@ Muestra un mensaje de inicio por 2 segundos.
 
 🔁 5. loop() (lo que se repite siempre, también es el corazón del programa)
 
+```cpp
 void loop() {
   leerBoton();
 
@@ -208,6 +218,7 @@ void loop() {
     }
   }
 }
+```
 
 Siempre revisa el botón con leerBoton().
 
@@ -228,6 +239,7 @@ Si está pausado, muestra un mensaje de pausa una sola vez.
 
 🔘 6. leerBoton()
 
+```cpp
 void leerBoton() {
   static unsigned long lastDebounceTime = 0;
   static const unsigned long debounceDelay = 50;
@@ -247,6 +259,7 @@ void leerBoton() {
     lastDebounceTime = millis();
   }
 }
+```
 
 Es el manejo del botón con antirrebote
 
@@ -264,6 +277,7 @@ Borra la pantalla y actualiza mensajes según eso.
 
 📺 7. mostrarLectura() (básicamente lo que se ve en pantalla)
 
+```cpp
 void mostrarLectura(int adc, float voltaje, float cond) {
   lcd.clear();
   lcd.setCursor(0, 0);
@@ -272,6 +286,7 @@ void mostrarLectura(int adc, float voltaje, float cond) {
   lcd.setCursor(0, 1);
   lcd.print("ADC:"); lcd.print(adc);
 }
+```
 
 Muestra en pantalla:
 
@@ -292,6 +307,56 @@ El valor ADC (de 0 a 1023).
 - ✅ Muestra datos correctamente en pantalla LCD.  
 - ✅ Permite pausar y reanudar mediciones con botón.  
 - 🕐 A la espera de integración de fórmula profesional para conversión precisa a salinidad.  
+
+---
+
+## 🦋 Progreso Agosto 2025: Medición con cálculo de salinidad y soporte OLED/LCD (rama `VersionAgosto2025`)
+
+Esta rama contiene mejoras y el progreso correspondiente al mes de Agosto que incluyen:
+
+- Soporte dual de pantallas OLED SSD1306 y LCD 16x2 I2C, seleccionable en el código.
+- Cálculo y visualización de salinidad estimada en gramos por litro (g/L).
+- Implementación de tres fórmulas configurables para convertir conductividad a salinidad:
+  - Lineal
+  - Cuadrática
+  - Cúbica  
+- Visualización extendida en pantalla (voltaje, conductividad, salinidad y ADC).
+- Parámetros calibrables (coeficientes de fórmula y rango máximo de conductividad).
+- Simulación y validación en plataformas Wokwi y Tinkercad con potenciómetro.
+- Gestión mejorada del botón con antirrebote para evitar lecturas erráticas.
+- Código modular preparado para futuras integraciones con fórmulas de calibración profesional y nuevos sensores.
+- Envío por puerto serial de todos los parámetros: ADC, voltaje, conductividad y salinidad.
+
+### Ejemplo de visualización en pantalla LCD o OLED:
+
+```
+V:2.3 C:24.5
+S:5.6g/L ADC:512
+```
+
+### Selección de fórmula en el código:
+
+```cpp
+int tipoFormula = 3; // 1=lineal, 2=cuadrática, 3=cúbica
+
+float salinidad = 0.0;
+if (tipoFormula == 1) {
+  salinidad = a1 * conductividad + b1;
+} else if (tipoFormula == 2) {
+  salinidad = a2 * pow(conductividad, 2) + b2 * conductividad + c2;
+} else if (tipoFormula == 3) {
+  salinidad = a3 * pow(conductividad, 3) + b3 * pow(conductividad, 2) + c3 * conductividad + d3;
+}
+```
+
+---
+
+## Estado actual
+
+- Rama `main`: funcional para medición básica con LCD 16x2 y potenciómetro.
+- Rama `VersionAgosto2025`: A la espera de la revisión de un profesional bioquímico o profesional de la química. Incluye cálculo y visualización de salinidad, soporte OLED, fórmulas configurables y simulación completa.
+- Validado en simuladores Wokwi y Tinkercad.
+- Código documentado y modular para facilitar calibración y expansión.
 
 ---
 
