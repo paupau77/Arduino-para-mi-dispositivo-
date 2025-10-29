@@ -26,6 +26,7 @@ Este proyecto fue creado con mucho ❤️ para ayudar en monitoreo de salud, qu�
 - 🧪 Estado actual
 - 🦋 Nueva rama, progreso del mes de Agosto 2025 
 - 🚀 Posibles mejoras futuras
+- 📚 Documentación
 - 💖 Mi proyecto fue hecho desde el corazón
 - ♥️ Agradecimientos
 - 🙌 Créditos
@@ -367,7 +368,18 @@ if (tipoFormula == 1) {
 
 - Incorporar la fórmula química o bioquímica para convertir conductividad a salinidad real.  
 - Alertas led
+
 ---
+
+## 📚 Documentación
+Para más detalles sobre el diseño, verificación y funcionamiento del dispositivo, consulta los siguientes archivos:
+
+* [Doc - Descripción del dispositivo](Doc%20-%20Descripci%C3%B3n%20del%20dispositivo%20.pdf)
+* [Doc - Ficha Técnica de mi dispositivo](Doc%20-%20Ficha%20T%C3%A9cnica%20de%20mi%20dispositivo%20.pdf)
+* [Doc - Verificación en los simuladores](Doc%20-%20Verificaci%C3%B3n%20en%20los%20simuladores.pdf)
+
+---
+
 
 ## 💖 Mi proyecto fue hecho desde el corazón
 Este proyecto no nació en un laboratorio. Nació en mi $${\color{pink} corazón }$$.
