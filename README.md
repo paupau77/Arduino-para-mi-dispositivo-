@@ -1,10 +1,13 @@
 # Medidor de Salinidad Básico con Arduino UNO
 
-![Arduino](https://img.shields.io/badge/Arduino-blue?style=flat-square&logo=arduino)
-[![Issues](https://img.shields.io/github/issues/paupau77/Arduino-para-mi-dispositivo-.svg)](https://github.com/paupau77/Arduino-para-mi-dispositivo-/Issues)
-![Estado](https://img.shields.io/badge/Estado-En%20Desarrollo-yellow?style=flat-square)
-![Licencia](https://img.shields.io/badge/Licencia-DNDA-important?style=flat-square)
-![Estado](https://img.shields.io/badge/Estado-Activo-brightgreen)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![Electrónica](https://img.shields.io/badge/Electrónica-FA7343?style=for-the-badge&logoColor=white)
+![LCD 16x2](https://img.shields.io/badge/LCD-I2C-1E90FF?style=for-the-badge)
+![Proyecto Activo](https://img.shields.io/badge/Estado-Activo-brightgreen?style=for-the-badge)
+![Licencia DNDA](https://img.shields.io/badge/Licencia-DNDA-orange?style=for-the-badge)
+![Issues 0 open](https://img.shields.io/badge/issues-0%20open-black?style=for-the-badge&logo=github&logoColor=white)
+![En Desarrollo](https://img.shields.io/badge/Estado-En%20Desarrollo-yellow?style=for-the-badge)
 
 > Dispositivo básico para medir la conductividad eléctrica de una muestra líquida (simulada con un potenciómetro), mostrando en pantalla LCD 16x2 I2C el voltaje, valor ADC y una estimación simple de la conductividad. Está preparado para incorporar una fórmula profesional que convierta la conductividad a salinidad real (g/L, ppt, etc) cuando se disponga.
 
