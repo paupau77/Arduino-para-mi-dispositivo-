@@ -18,7 +18,7 @@ Este proyecto fue creado con mucho ❤️ para ayudar en monitoreo de salud, qu�
 
 ---
 
-## 📋 Índice del Proyecto
+## 📋 Índice de mi Proyecto
 
 ---
 
