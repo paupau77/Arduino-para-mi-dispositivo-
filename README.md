@@ -18,23 +18,47 @@ Este proyecto fue creado con mucho ❤️ para ayudar en monitoreo de salud, qu�
 
 ---
 
-## 📋 Índice
+## 📋 Índice del Proyecto
 
-- 🔧 Componentes
-- 🔌 Esquema de conexión
-- 📷 Esquemas & simuladores
-- 🧠 Funcionamiento del sistema  
-- 💻 Código Arduino destacado
-- 🧠 Funcionamiento del código  
-- 🧪 Estado actual
-- 🦋 Nueva rama, progreso del mes de Agosto 2025 
-- 🚀 Posibles mejoras futuras
-- 📚 Documentación
-- 💖 Mi proyecto fue hecho desde el corazón
-- ♥️ Agradecimientos
-- 🙌 Créditos
-- 📄 Licencia  
-- ✍️ Autora
+---
+
+### **1. ⚙️ Hardware y Componentes**
+
+* **1.1. 🔧 Componentes**
+* **1.2. 🔌 Esquema de conexión**
+* **1.3. 📷 Esquemas & simuladores**
+
+---
+
+### **2. 🧠 Lógica del Sistema**
+
+* **2.1. 🧠 Funcionamiento del sistema**
+* **2.2. 💻 Código Arduino destacado**
+* **2.3. 🧠 Funcionamiento del código**
+
+---
+
+### **3. 📈 Estado y Desarrollo**
+
+* **3.1. 🧪 Estado actual**
+* **3.2. 🦋 Nueva rama, progreso del mes de Agosto 2025**
+
+---
+
+### **4. 📚Futuro y Documentación**
+
+* **4.1. 🚀 Posibles mejoras futuras**
+* **4.2. 📚 Documentación**
+
+---
+
+### **5. ❤️ Agradecimientos y Licencia**
+
+* **5.1. 💖 Mi proyecto fue hecho desde el corazón**
+* **5.2. ♥️ Agradecimientos**
+* **5.3. 🙌 Créditos**
+* **5.4. 📄 Licencia**
+* **5.5. ✍️ Autora**
 
 ---
 
